@@ -1,4 +1,4 @@
-package com.sss;
+package com.sss.simple;
 
 import java.util.HashMap;
 import java.util.Map;

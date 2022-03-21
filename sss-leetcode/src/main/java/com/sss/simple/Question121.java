@@ -1,4 +1,4 @@
-package com.sss;
+package com.sss.simple;
 
 /** @title:买卖股票的最佳时机
  *  @Author:杀神松1997
