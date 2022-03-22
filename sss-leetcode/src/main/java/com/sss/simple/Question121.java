@@ -7,6 +7,7 @@ package com.sss.simple;
  * 注意你不能在买入股票前卖出股票。如果你不能获取任何利润，返回0
  */
 public class Question121 {
+    //思路：寻找最大递增区间。当比当前指针指向的元素大  则计算值 一直取到递增到最大。比当前指针小 则更换指针
     public static int solution(int arr[]){
         int maxProfit = 0;
         int current = Integer.MAX_VALUE;

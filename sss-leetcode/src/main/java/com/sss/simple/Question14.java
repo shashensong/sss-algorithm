@@ -35,7 +35,6 @@ public class Question14 {
 
     //纵向扫描
     public String solutionTwo(String[]str){
-        String prefix = str[0];
         for (int i = 0; i < str[0].length(); i++) {
             char current = str[0].charAt(i);
             for (int j = 1; j < str.length; j++) {

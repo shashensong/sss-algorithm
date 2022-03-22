@@ -12,10 +12,12 @@ public class Question07 {
             return false;
         }
         int reverseNumber = 0;
+        //每次取最后一位数字赋给结果直到两者位数相等或差一位
         while (x > reverseNumber){
             reverseNumber = reverseNumber * 10 + x % 10;
             x /= 10;
         }
+        //如果是奇数位 去除不相关的最后一位 12321->  123  12 去除3
        return x == reverseNumber || x == reverseNumber / 10;
     }
 

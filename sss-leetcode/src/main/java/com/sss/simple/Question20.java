@@ -22,6 +22,7 @@ public class Question20 {
             put('}','{');
         }
     };
+    //思路：每个右括号都必须与最近的左括号构成闭合。最近的左括号即栈顶元素
     public boolean solution(String str){
         Deque deque = new LinkedList();
         //奇数个括号一定无法配对

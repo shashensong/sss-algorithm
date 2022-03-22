@@ -29,6 +29,7 @@ public class Question13 {
     public int solution(String str){
         int value = 0;
         for (int i = 0; i < str.length(); i++) {
+            //遍历每个字符，每个字符与下一个字符值比较，如果小于则做减法，大于做加法
             int current = map.get(str.charAt(i));
             if(i < str.length()-1 && current < map.get(str.charAt(i+1))){
                 value -= current;
