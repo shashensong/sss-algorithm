@@ -1,5 +1,6 @@
 package com.sss.simple;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  * 所以返回 [0, 1]
  */
 public class Question01 {
-    public int[] solution(int[] arr,int target){
+    public static int[] solution(int[] arr,int target){
         //Hash表求解减少时间复杂度
         Map<Integer,Integer> map = new HashMap<Integer, Integer>();
         for (int i = 0; i < arr.length; i++) {
@@ -21,9 +22,13 @@ public class Question01 {
                 return new int[]{i,map.get(target-arr[i])};
             }
             else {
-                map.put(map.get(i),i);
+                map.put(arr[i],i);
             }
         }
         return new int[0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(solution(new int[]{2,7,11,15},9)));
     }
 }

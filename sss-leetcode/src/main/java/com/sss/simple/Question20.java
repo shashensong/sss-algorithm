@@ -24,7 +24,7 @@ public class Question20 {
     };
     //思路：每个右括号都必须与最近的左括号构成闭合。最近的左括号即栈顶元素
     public boolean solution(String str){
-        Deque deque = new LinkedList();
+        Deque<Character> deque = new LinkedList();
         //奇数个括号一定无法配对
         if(str.length() % 2 == 1){
             return false;
@@ -40,12 +40,11 @@ public class Question20 {
                 deque.push(str.charAt(i));
             }
         }
-        return true;
+        return deque.isEmpty();
     }
-
 
     public static void main(String[] args) {
         Question20 question20 = new Question20();
-        System.out.println(question20.solution(""));
+        System.out.println(question20.solution("()"));
     }
 }
