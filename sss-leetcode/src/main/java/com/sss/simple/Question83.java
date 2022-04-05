@@ -30,6 +30,7 @@ public class Question83 {
          while(current != null && head.val == current.val){
              current = current.next;
          }
+         //递归删除
          head.next = mySolution(current);
          return head;
     }
@@ -44,6 +45,6 @@ public class Question83 {
     }
 
     public static void main(String[] args) {
-        System.out.println(toString(Question83.mySolution(new ListNode(1,new ListNode(1,new ListNode(1,new ListNode(1,new ListNode(1,null))))))));
+        System.out.println(toString(Question83.mySolution(new ListNode(1,new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(3,null))))))));
     }
 }
