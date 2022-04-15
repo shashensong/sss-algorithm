@@ -5,7 +5,7 @@ import java.util.List;
 
 /** @title:最长回文子串
  *  @Author:杀神松1997
- * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
  * 示例 1：
  * 输入：s = "babad"
  * 输出："bab"
@@ -40,7 +40,7 @@ public class Question05 {
            low--;
            high++;
        }
-       while (high - low > range[1] - range[0]){
+       if (high - low > range[1] - range[0]){
            range[0] = low;
            range[1] = high;
        }
