@@ -38,32 +38,23 @@ public class Question15 {
             }
            int high = i+1;
            int current =-nums[low];
-            List<Integer> currentResult = new ArrayList<>();
             while (high < nums.length){
                 if(map.containsKey(current-nums[high])){
+                    List<Integer> currentResult = new ArrayList<>();
                     currentResult.add(-current);
                     currentResult.add(current-nums[high]);
                     currentResult.add(nums[high]);
+                    result.add(currentResult);
                     //该元素已经遍历过了 跳过避免重复
                     while(high < nums.length -1 && nums[high] == nums[high+1]){
                         high++;
-                    }
-                    //到最后一位依旧是遍历过的元素，直接break
-                    if(high >= nums.length){
-                        break;
                     }
                 }
                 else {
                     map.put(nums[high],high);
                 }
-                if(currentResult.size() != 0){
-                    result.add(currentResult);
-                    //清空数组
-                    currentResult = new ArrayList<>();
-                }
                 high++;
             }
-
         }
         return result;
     }
