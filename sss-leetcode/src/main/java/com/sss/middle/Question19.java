@@ -2,9 +2,7 @@ package com.sss.middle;
 
 import com.sss.repository.ListNode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /** @title:删除链表的倒数第n个结点
  *  @Author:杀神松1997
@@ -22,6 +20,7 @@ import java.util.List;
  * 输出：[1]
  *
  */
+
 public class Question19 {
 
     //杀神松解
@@ -44,6 +43,28 @@ public class Question19 {
             head = head.next;
         }
         return result.next;
+    }
+
+    //评论区大牛解
+    public ListNode hotSolution(ListNode head, int n) {
+        ListNode temp = head;
+        Map<Integer,ListNode> m = new HashMap<>();
+        int index=1;
+        while(temp!=null){
+            m.put(index++,temp);
+            temp = temp.next;
+        }
+        int size = m.size();
+        if(size == 1)
+            return null;
+        if(n == 1){
+            m.get(size-1).next = null;
+        }else if(n == size){
+            head = head.next;
+        }else{
+            m.get(size-n).next = m.get(size-n+2);
+        }
+        return head;
     }
 
     public static void main(String[] args) {
