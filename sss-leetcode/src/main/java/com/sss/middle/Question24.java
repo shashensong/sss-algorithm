@@ -45,13 +45,12 @@ public class Question24 {
                 else {
                     cursor.next = new ListNode(head.next.val);
                 }
-                cursor = cursor.next;
             }
             //奇数位
             else {
                 cursor.next = new ListNode(pre.val);
-                cursor = cursor.next;
             }
+            cursor = cursor.next;
             pre = new ListNode(head.val);
             head = head.next;
             count++;
