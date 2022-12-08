@@ -22,7 +22,7 @@ public class Question05 {
         //结果
         int[] result = new int[2];
         for (int i = 0; i < s.length(); i++) {
-            findStr(str,i,result);
+            i = findStr(str,i,result);
         }
         return s.substring(result[0],result[1]+1);
     }
