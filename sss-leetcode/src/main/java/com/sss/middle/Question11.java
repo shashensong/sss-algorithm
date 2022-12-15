@@ -17,7 +17,7 @@ public class Question11 {
         for (int i = 0; i < height.length; i++) {
             int w = 0;
             int h = 0;
-            int area = w * h;
+            int area = 0;
             for (int j = i + 1; j < height.length; j++) {
                 w = Math.abs(j - i);
                     h = Math.min(height[i],height[j]);

@@ -35,16 +35,15 @@ public class Question16 {
             if(first != 0 && nums[first] == nums[first-1]){
                 continue;
             }
+            int third = nums.length - 1;
             for (int second = first + 1; second < nums.length - 1; second++) {
-                int third = nums.length - 1;
-
                 //该元素已经遍历过了 跳过避免重复
                 if (second > first + 1 && nums[second] == nums[second - 1]) {
                     continue;
                 }
                 while (second < third){
                     int sum = nums[first] + nums[second] + nums[third];
-                    int current = Math.abs(target-(nums[first] + nums[second] + nums[third]));
+                    int current = Math.abs(target-sum);
                     if(current == 0){
                         return sum;
                     }

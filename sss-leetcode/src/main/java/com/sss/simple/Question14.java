@@ -1,8 +1,5 @@
 package com.sss.simple;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /** @title:最长公共前缀
  *  @Author:杀神松1997
  * 编写一个函数来查找字符串数组中的最长公共前缀。
