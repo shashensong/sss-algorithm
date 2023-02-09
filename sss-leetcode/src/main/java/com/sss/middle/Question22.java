@@ -51,9 +51,9 @@ public class Question22 {
                   deque.removeFirst();
                   count--;
               }
-              //栈为空必定不能选择右括号,栈顶不是左括号必定不能选择右括号
+              //栈为空必定不能选择右括号
               else if(i == 1){
-                  if(deque.isEmpty() || deque.peekFirst() != '('){
+                  if(deque.isEmpty()){
                       continue;
                   }
                   deque.removeFirst();

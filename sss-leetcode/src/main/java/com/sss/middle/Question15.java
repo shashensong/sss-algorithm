@@ -103,7 +103,7 @@ public class Question15 {
 
 
     public static void main(String[] args) {
-       List<List<Integer>> list = Question15.mySolution(new int[]{-1,0,1,2,-1,-4});
+       List<List<Integer>> list = Question15.officialSolution(new int[]{-2,-1,0,1,2,3});
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.get(i).size(); j++) {
                 System.out.println(list.get(i).get(j));

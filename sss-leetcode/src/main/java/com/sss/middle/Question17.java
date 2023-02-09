@@ -43,6 +43,7 @@ public class Question17 {
     return result;
     }
     public static void backTrack(List<String> result,Map<Character, String> phoneMap,String digits,int index,StringBuffer combination){
+        //退出递归循环条件
         if(index == digits.length()){
             result.add(combination.toString());
         }

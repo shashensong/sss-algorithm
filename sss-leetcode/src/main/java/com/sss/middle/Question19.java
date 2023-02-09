@@ -26,8 +26,7 @@ public class Question19 {
     //杀神松解
     public static ListNode mySolution(ListNode head, int n) {
         ListNode result = new ListNode(0);
-        ListNode cursor = new ListNode();
-        cursor = head;
+        ListNode cursor = head;
         int length = 0;
         while (cursor != null){
             cursor = cursor.next;
